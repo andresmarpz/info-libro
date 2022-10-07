@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Libros</title>
+		<script>
+			if(!localStorage.getItem('login')) window.location = 'login.html'
+		</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-light bg-light mb-4">
+		<div class="container d-flex justify-content-between">
+			<a class="navbar-brand" href="#">
+			  <h1>Biblioteca</h1>
+			</a>
+			<button class="btn btn-primary" onclick="localStorage.removeItem('login'); window.location = 'login.html'">Cerrar sesión</button>
+		</div>
+	</nav>
+	<div class="container">
+		<h2>Filtros</h2>
+		<div id="filtro-rango-pag">
+			<div>
+				Ordenar por: <span class="">
+					<button id="sortPagDesc" class="btn btn-light border">Pags Desc</button>
+					<button id="sortPagAsc" class="btn btn-light border">Pags Asc</button>
+				</span>
+			</div>
+			<div>
+				Filtrar por: 
+				<span class="d-flex gap-2">
+					<input type="number" placeholder="min." id="rango-min" class="form-control">
+					<input type="number" placeholder="máx." id="rango-max" class="form-control">
+				
+					<button id="filtrar" class="btn btn-light border">Filtrar</button>
+					<button id="limpiar" class="btn btn-light border">Limpiar</button><br><br>
+				</span>
+			</div>
+			<div>
+				Buscar: <span>
+					<input type="search" id="buscador" class="form-control">
+				</span>
+			</div>
+		</div>
+		<hr>
+
+		<h2>Libros</h2>
+		<div class="mt-4 bg-light shadow-sm rounded">
+			<ul id="listado">
+
+			</ul>
+		</div>
+	</div>
+
+    <script src="scripts/init.js"></script>
+    <script src="scripts/libros.js"></script>
+</body>
+
+</html>

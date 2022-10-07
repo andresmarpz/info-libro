@@ -1,0 +1,6 @@
+
+1-Terminar la página "info-libro".
+
+2-Cambiar todo el estilo del sitio haciendo uso de Bootstrap.
+
+2-Hacer que el sitio se adapte a dispositivos moviles.

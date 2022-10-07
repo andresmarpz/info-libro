@@ -1,0 +1,33 @@
+body{
+	background-color: rgba(238, 217, 188, 0.952) !important;
+}
+
+.header{
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	background-color: rgba(161, 141, 112, 0.952);
+	border-bottom: 1px solid black;
+}
+
+.invalid{
+  background-color: red;
+}
+
+.libro-list{
+	color: black;
+	text-decoration: none;
+}
+
+.carousel-img{
+	width: 100%;
+	height: auto;
+	max-width: 400px;
+	min-width: 150px;
+	margin: auto;
+}
+
+.rel-link{
+	text-decoration: none;
+	color: black;
+}

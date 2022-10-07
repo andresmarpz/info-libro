@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+		<script>
+			if(!localStorage.getItem('login')) window.location = 'login.html'
+		</script>
+</head>
+
+<body>
+		<nav class="navbar navbar-light bg-light mb-4">
+			<div class="container d-flex justify-content-between">
+				<a class="navbar-brand" href="index.html">
+					<h1>Biblioteca</h1>
+				</a>
+				<button class="btn btn-primary" onclick="localStorage.removeItem('login'); window.location = 'login.html'">Cerrar sesión</button>
+			</div>
+	  </nav>
+    <div class="verLibro mt-4">
+		<div id="contenido"></div>
+        <hr>
+        <div id="imagenes" class="img d-flex justify-content-center align-items-center"></div>
+		<hr>
+        <div id="contenido2"></div>
+		<hr>
+		<div id="relacionados" class="container d-flex gap-4 justify-content-center flex-wrap"></div>
+		<hr>
+        <a class="container" href="index.html">Ver la lista de libros</a>
+        <hr>
+    </div>
+
+    
+	
+	<script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/init.js"></script>
+    <script src="scripts/ver-libro.js"></script>
+	
+</body>
+
+</html>
