@@ -17,7 +17,10 @@
 			<a class="navbar-brand" href="#">
 			  <h1>Biblioteca</h1>
 			</a>
-			<button class="btn btn-primary" onclick="localStorage.removeItem('login'); window.location = 'login.html'">Cerrar sesión</button>
+			<span>
+				<a class="btn" href="/cajon.html">Cajon</a>
+				<button class="btn btn-primary" onclick="localStorage.removeItem('login'); window.location = 'login.html'">Cerrar sesión</button>
+			</span>
 		</div>
 	</nav>
 	<div class="container">
@@ -54,7 +57,6 @@
 			</ul>
 		</div>
 	</div>
-
     <script src="scripts/init.js"></script>
     <script src="scripts/libros.js"></script>
 </body>

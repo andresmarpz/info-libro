@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<title>Cajon</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-light mb-4">
+			<div class="container d-flex justify-content-between">
+				<a class="navbar-brand" href="index.html">
+					<h1>Biblioteca</h1>
+				</a>
+				<span>
+					<a class="btn" href="/cajon.html">Cajon</a>
+					<button
+						class="btn btn-primary"
+						onclick="localStorage.removeItem('login'); window.location = 'login.html'"
+					>
+						Cerrar sesión
+					</button>
+				</span>
+			</div>
+		</nav>
+		<div class="container">
+			<div id="container"></div>
+			<div class="mt-4">
+				<h3>Préstamo</h3>
+				<p>Fecha de devolución: <span id="fecha-limite">-</span></p>
+
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					Rellenar datos
+				</button>
+
+				<!-- Modal -->
+				<form id="form-prestamo">
+					<div
+						class="modal fade"
+						id="exampleModal"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div class="modal-body">
+	
+								<div class="d-flex flex-column">
+									<label for="datos-">Departamento</label>
+									<input class="form-control" name="datos-departamento" id="datos-departamento" type="text" required />
+								</div>
+								<div class="d-flex flex-column">
+									<label for="datos-ciudad">Ciudad</label>
+									<input class="form-control" name="datos-ciudad" id="datos-ciudad" type="text" required />
+								</div>
+								<div class="d-flex flex-column">
+									<label for="datos-calle">Calle</label>
+									<input class="form-control" name="datos-calle" id="datos-calle" type="text" required />
+								</div>
+								<div class="d-flex flex-column">
+									<label for="datos-numero">Número</label>
+									<input class="form-control" name="datos-numero" type="number" id="datos-numero" required />
+								</div>
+	
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button id="finalizar" type="submit">Finalizar préstamo</button>
+				</form>
+
+			</div>
+		</div>
+		<script src="scripts/init.js"></script>
+		<script src="scripts/cajon.js"></script>
+		<script src="scripts/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

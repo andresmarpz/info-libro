@@ -13,14 +13,17 @@
 </head>
 
 <body>
-		<nav class="navbar navbar-light bg-light mb-4">
-			<div class="container d-flex justify-content-between">
-				<a class="navbar-brand" href="index.html">
-					<h1>Biblioteca</h1>
-				</a>
+	<nav class="navbar navbar-light bg-light mb-4">
+		<div class="container d-flex justify-content-between">
+			<a class="navbar-brand" href="index.html">
+			  <h1>Biblioteca</h1>
+			</a>
+			<span>
+				<a class="btn" href="/cajon.html">Cajon</a>
 				<button class="btn btn-primary" onclick="localStorage.removeItem('login'); window.location = 'login.html'">Cerrar sesión</button>
-			</div>
-	  </nav>
+			</span>
+		</div>
+	</nav>
     <div class="verLibro mt-4">
 		<div id="contenido"></div>
         <hr>

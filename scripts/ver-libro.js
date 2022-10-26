@@ -25,8 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 					<div><b>Editorial:</b> ${libro.editorial}</div>
 					<div><b>ISBN:</b> ${libro.isbn}</div>
 					<div><b>Paginas:</b> ${libro.paginas}</div>
+					<div><button class="btn btn-primary" id="agregar-libro">Agregar al cajon</button></div>
 				</div>
 			`
+
+			document.getElementById('agregar-libro').addEventListener('click', () => {
+				agregarLibro(libro, id);
+			})
 
 			let imagenesHtml = "";
 			for (let img of libro.imagenes) {
